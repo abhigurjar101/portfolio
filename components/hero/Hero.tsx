@@ -2,13 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import { profile } from "@/data/profile";
-import { Mail, ArrowDown, Sparkles, MapPin, Phone, ShieldCheck, Download } from "lucide-react";
+import { Mail, ArrowDown, Sparkles, MapPin, Phone, ShieldCheck, Download, GraduationCap } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/SocialIcons";
 import OfferLetterModal from "@/components/ui/OfferLetterModal";
 import Image from "next/image";
 
 const roles = [
   "Sr Gen AI & ML Engineer & Trainer",
+  "IIIT-Bangalore & LJMU (UK) in AI & ML",
   "GraphRAG & Knowledge Graph Specialist",
   "Production RAG & Neo4j Architect",
   "Local LLMs (Ollama) & Agentic AI Engineer",
@@ -130,21 +131,28 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-12 grid lg:grid-cols-12 gap-12 items-center">
         {/* Text */}
         <div className="flex flex-col gap-6 lg:col-span-7 order-2 lg:order-1">
-          {/* Status badge */}
-          <div className="flex flex-wrap items-center gap-3">
+          {/* Status badge & Academic Tagline Pill */}
+          <div className="flex flex-wrap items-center gap-2.5">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-950/20">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
               <span className="text-[11px] font-semibold tracking-wider uppercase text-emerald-300">
                 Available for Senior Roles & Consulting
               </span>
             </div>
+
+            {/* Academic Credential Tagline Pill */}
+            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#6366f1]/30 bg-[#6366f1]/10 text-[11px] font-medium text-[#c7d2fe]">
+              <GraduationCap size={13} className="text-[#818cf8]" />
+              <span>IIIT-Bangalore · LJMU (UK)</span>
+            </div>
+
             <div className="flex items-center gap-1.5 text-xs text-[#94a3b8]">
               <MapPin size={13} className="text-[#818cf8]" />
               <span>{profile.location}</span>
             </div>
           </div>
 
-          {/* Main headline */}
+          {/* Main headline & Minimalist Tagline */}
           <div>
             <p className="section-label mb-2 tracking-[0.25em]">{profile.roleHeadline}</p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.08] tracking-tight">
@@ -154,6 +162,12 @@ export default function Hero() {
               <br />
               <span className="gradient-text-accent">& LLM Architect.</span>
             </h1>
+
+            {/* Small Tagline in Minimalist Format */}
+            <div className="mt-3 flex items-center gap-2 text-xs sm:text-sm font-mono text-[#a5b4fc] tracking-wide">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
+              <span>{profile.tagline}</span>
+            </div>
           </div>
 
           {/* Typewriter */}
