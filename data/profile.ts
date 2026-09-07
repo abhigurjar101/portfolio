@@ -16,7 +16,7 @@ export const profile = {
   offerLetter: "/documents/techeon-offer-letter.pdf",
   available: true,
   tagline: "Architecting verifiable, relationship-grounded GraphRAG systems.",
-  repos: 12,
+  repos: 17,
   experienceTracks: {
     genAi: "2 Years",
     python: "1 Year",

@@ -9,6 +9,9 @@ export type ProjectCategory =
   | "AI AGENTS"
   | "ML"
   | "NLP"
+  | "SQL"
+  | "AWS"
+  | "HEALTHCARE"
   | "BACKEND";
 
 export interface Project {
@@ -46,51 +49,108 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "vision-guard",
-    title: "VisionGuard — Industrial Defect Detection & Real-Time Optical Inspection",
+    id: "sql-production-analytics",
+    title: "SQL Production Analytics Engine & Star-Schema Warehouse",
     description:
-      "Enterprise-grade Computer Vision and Automated Optical Inspection (AOI) pipeline using OpenCV, YOLOv8, and CUDA acceleration for sub-15ms surface anomaly and defect detection.",
+      "Enterprise Star-Schema dimensional warehouse with RFM customer segmentation, 7-day rolling window functions, month-over-month cohort retention, and market basket analysis.",
     longDescription:
-      "Engineered an industry-level Computer Vision quality inspection pipeline using OpenCV (cv2), PyTorch, and YOLOv8 for automated manufacturing telemetry. Implemented multi-threaded RTSP industrial camera ingestion with real-time morphological filtering, Canny edge gradient analysis, contour defect segmentation, and HSV color thresholding. Achieved sub-15ms inference latency across high-FPS streams with automated anomaly alerting and bounding-box spatial tracking.",
-    categories: ["COMPUTER VISION", "ML", "BACKEND"],
-    tech: ["OpenCV", "Python", "PyTorch", "YOLOv8", "CUDA", "Canny Edge", "NumPy", "FastAPI"],
-    github: "https://github.com/abhigurjar101",
+      "Engineered an industry-grade Star-Schema Data Warehouse (dim_customers, dim_products, dim_channels, fact_orders, fact_order_items) with optimized indexing for sub-second analytical execution. Built 5 production SQL query modules including RFM segmentation with dynamic tier labeling, rolling moving average window frames, cohort retention rate calculations, and market basket self-joins for product bundling.",
+    categories: ["SQL", "BACKEND"],
+    tech: ["SQL", "PostgreSQL", "SQLite", "DuckDB", "Star Schema", "Window Functions", "CTEs", "Cohort Analysis"],
+    github: "https://github.com/abhigurjar101/sql-production-analytics-engine",
     featured: true,
-    language: "Python",
+    language: "SQL / Python",
     highlights: [
-      "Engineered sub-15ms optical quality inspection pipeline processing 60+ FPS industrial video feeds with OpenCV and CUDA",
-      "Designed hybrid anomaly detection combining traditional morphological contour analysis with deep learning object segmentation",
-      "Automated micro-defect detection, edge distortion profiling, and HSV color variance segmentation for manufacturing QA",
-      "Built multi-threaded frame buffers to eliminate frame drop and latency jitter across concurrent camera feeds",
+      "Designed full Star-Schema warehouse with indexed foreign keys for sub-second analytical execution",
+      "Engineered RFM customer segmentation CTEs classifying customers into High-LTV, Loyal, and At-Risk tiers",
+      "Implemented 7-day and 30-day rolling moving averages using ROWS BETWEEN and LAG() window functions",
+      "Computed Month-over-Month customer cohort retention matrices and market basket cross-selling affinities",
     ],
   },
   {
-    id: "intelligent-doc-rag",
-    title: "Intelligent Document Question-Answering System (RAG)",
+    id: "aws-serverless-pipeline",
+    title: "AWS Serverless Document Intelligence & Bedrock RAG",
     description:
-      "Enterprise Retrieval-Augmented Generation (RAG) system with semantic, context-aware responses, scalable document ingestion, and hybrid vector indexing.",
+      "Zero-server event-driven knowledge pipeline on AWS utilizing S3 triggers, Lambda processors, DynamoDB audit ledger, API Gateway, and Amazon Bedrock Foundation Models.",
     longDescription:
-      "Engineered an enterprise-grade Retrieval-Augmented Generation (RAG) system using Python, LangChain, Hugging Face models, FAISS, and Qdrant. Developed robust ingestion pipelines capable of parsing heterogeneous documents, generating high-dimensional embeddings, and performing sub-second semantic retrieval with context-aware response synthesis.",
-    categories: ["GEN AI", "RAG", "LLM", "BACKEND"],
-    tech: ["Python", "LangChain", "Hugging Face", "FAISS", "Qdrant", "Vector Search", "FastAPI"],
-    github: "https://github.com/abhigurjar101",
+      "Architected a production-ready serverless AI pipeline defined entirely as Infrastructure-as-Code via AWS SAM. Triggered by S3 object uploads, Lambda functions perform intelligent semantic chunking and embedding generation via Amazon Bedrock Titan, storing audit metadata in DynamoDB. User queries routed through Amazon API Gateway retrieve grounded context and invoke Bedrock (Claude 3.5 Sonnet) with sub-10ms citation responses.",
+    categories: ["AWS", "GEN AI", "RAG", "BACKEND"],
+    tech: ["AWS Lambda", "Amazon Bedrock", "Amazon S3", "DynamoDB", "AWS SAM", "API Gateway", "Python", "Boto3"],
+    github: "https://github.com/abhigurjar101/aws-serverless-ai-pipeline",
+    featured: true,
+    language: "Python / YAML",
+    highlights: [
+      "Event-driven architecture triggered automatically by S3 ObjectCreated events for zero idle cost ($0/mo when idle)",
+      "Automated semantic document chunking and vector embedding generation via Amazon Bedrock Titan",
+      "Amazon DynamoDB On-Demand audit table storing processing status, chunk counts, and cryptographic hashes",
+      "Low-latency REST API Gateway endpoint delivering grounded citations and hallucination-free answers",
+    ],
+  },
+  {
+    id: "advanced-nlp-engine",
+    title: "Advanced NLP Semantic Engine (GraphRAG & Reranker)",
+    description:
+      "Production NLP engine implementing dynamic sentence boundary semantic chunking, GraphRAG Subject-Predicate-Object relation triplet extraction, and neural cross-encoder precision reranking.",
+    longDescription:
+      "Engineered an advanced Natural Language Processing system solving common enterprise retrieval failures. Implemented dynamic cosine distance semantic chunking that detects thematic shifts to prevent split sentences, automated Subject-Predicate-Object (SPO) triplet extraction for GraphRAG knowledge graphs, and a two-stage Cross-Encoder combining BM25 lexical alignment with cross-attention token alignment.",
+    categories: ["NLP", "ADVANCED RAG", "KNOWLEDGE GRAPH", "GEN AI"],
+    tech: ["Python", "NLP", "GraphRAG", "Cross-Encoder", "Semantic Chunking", "Transformers", "BM25"],
+    github: "https://github.com/abhigurjar101/advanced-nlp-semantic-engine",
     featured: true,
     language: "Python",
     highlights: [
-      "Built a Retrieval-Augmented Generation (RAG) system for enterprise document search with semantic, context-aware responses",
-      "Designed scalable document ingestion and high-dimensional embedding pipelines",
-      "Benchmarked FAISS and Qdrant vector databases for ultra-low latency retrieval",
-      "Integrated Hugging Face transformer embeddings for precise domain-specific matching",
+      "Dynamic semantic chunking with sentence boundary cosine distance detection to eliminate arbitrary token cuts",
+      "Automated Knowledge Graph SPO relation extraction constructing entity-relation triples for GraphRAG",
+      "Neural Cross-Encoder reranker combining BM25 lexical scoring and cross-attention alignment to boost top-1 retrieval",
+      "Lightweight, zero-dependency execution runnable across CPU and edge environments in milliseconds",
+    ],
+  },
+  {
+    id: "healthcare-management",
+    title: "Enterprise Healthcare Management & Hospital Analytics",
+    description:
+      "Comprehensive 20-module clinical operating system and healthcare analytics engine covering RBAC auth, doctor schedules, patient admission, pharmacy inventory, and clinical KPI dashboards.",
+    longDescription:
+      "Developed a full-scale healthcare management and clinical analytics architecture spanning 20 modular services. Features object-oriented User role hierarchies (RBAC), simulated OTP verification, patient registration with Aadhaar validation, doctor appointment conflict prevention, bed allocation, lab test dispatch, surgical theatre tracking, and an automated clinical KPI dashboard backed by SQLite.",
+    categories: ["HEALTHCARE", "BACKEND", "SQL"],
+    tech: ["Python", "SQLite", "Healthcare Analytics", "Clinical Data", "OOP", "RBAC", "KPI Dashboards"],
+    github: "https://github.com/abhigurjar101/enterprise-healthcare-management-system",
+    featured: true,
+    language: "Python / SQL",
+    highlights: [
+      "Modular 20-service hospital operating architecture covering clinical, administrative, and pharmacy workflows",
+      "ACID-compliant SQLite relational database with 18 normalized tables, audit logs, and foreign key constraints",
+      "Doctor schedule parser with JSON availability calendars and appointment collision prevention",
+      "Executive clinical KPI analytics dashboard computing bed occupancy, department revenue, and claims status",
+    ],
+  },
+  {
+    id: "industrial-defect-detector",
+    title: "Industrial Surface Defect Classifier (Edge Vision)",
+    description:
+      "Automated optical inspection system using MobileNetV2 Transfer Learning and texture roughness profiling to detect and classify 6 industrial steel surface defects in real time.",
+    longDescription:
+      "Engineered an industrial edge computer vision quality inspection pipeline trained on real manufacturing steel surfaces (NEU-DET). Combines deep convolutional transfer learning (MobileNetV2) with surface texture roughness and intensity profiling, classifying crazing, inclusion, patches, pitted surfaces, rolled-in scale, and scratches with sub-15ms inference latency.",
+    categories: ["COMPUTER VISION", "ML"],
+    tech: ["PyTorch", "MobileNetV2", "Computer Vision", "OpenCV", "Pillow", "Transfer Learning", "Edge AI"],
+    github: "https://github.com/abhigurjar101/industrial-surface-defect-detection",
+    featured: true,
+    language: "Python",
+    highlights: [
+      "Transfer learning pipeline adapting MobileNetV2 for real-time industrial manufacturing quality assurance",
+      "Classifies 6 critical steel surface defect categories: crazing, inclusion, patches, pits, scale, scratches",
+      "Lightweight model footprint (<15 MB) optimized for real-time edge deployment on NVIDIA Jetson and IPCs",
+      "Automated MES integration severity classification (CRITICAL vs. MEDIUM) for robotic coil rejection",
     ],
   },
   {
     id: "ai-data-assistant",
-    title: "AI Data Assistant & AutoML Studio",
+    title: "AI Data Analyst Assistant & Natural Language SQL Studio",
     description:
-      "Interactive data science companion that turns natural language queries into DuckDB SQL, runs automated EDA with IQR outlier detection, and trains AutoML models.",
+      "Interactive data science companion that turns natural language queries into DuckDB SQL, runs automated EDA with IQR outlier detection, and trains predictive AutoML models.",
     longDescription:
       "An intelligent, multi-engine data analytics web platform built with Streamlit, DuckDB, Scikit-learn, and 5 pluggable LLM backends (Groq, Google Gemini, Ollama, OpenAI). Automates data cleaning, SQL query generation, predictive AutoML modeling with feature importance, and one-click HTML executive report generation.",
-    categories: ["GEN AI", "LLM", "ML", "BACKEND"],
+    categories: ["GEN AI", "LLM", "ML", "SQL", "BACKEND"],
     tech: ["Python", "Streamlit", "DuckDB", "Groq", "Ollama", "Gemini", "Scikit-learn"],
     github: "https://github.com/abhigurjar101/AI-DATA-ASSISTANT",
     featured: true,
