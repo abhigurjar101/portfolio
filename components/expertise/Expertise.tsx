@@ -4,16 +4,14 @@ import { coreExpertise } from "@/data/skills";
 import { Network, Database, Cpu, Brain, Layers, Code2, Server, Cloud, FlaskConical, Bot } from "lucide-react";
 
 const iconMap: Record<string, React.ReactNode> = {
-  "GraphRAG": <Network size={20} />,
-  "RAG & Vector Search": <Database size={20} />,
-  "Local LLMs": <Brain size={20} />,
-  "Agentic AI": <Bot size={20} />,
-  "Neo4j & Ontologies": <Network size={20} />,
-  "Python Engineering": <Code2 size={20} />,
-  "Machine Learning": <Cpu size={20} />,
-  "NLP & Vision": <FlaskConical size={20} />,
-  "Data Engineering": <Server size={20} />,
-  "AWS & Cloud": <Cloud size={20} />,
+  "AI & ML Engineering": <Cpu size={20} />,
+  "Data Analytics & SQL": <Database size={20} />,
+  "GraphRAG & RAG (Enthusiast)": <Network size={20} />,
+  "Full Stack Python": <Code2 size={20} />,
+  "Growth Marketing & SEO": <Layers size={20} />,
+  "Client Solutions & System Design": <Server size={20} />,
+  "Corporate AI Mentorship": <Bot size={20} />,
+  "Local LLM Deployments": <Brain size={20} />,
 };
 
 export default function Expertise() {
@@ -30,12 +28,12 @@ export default function Expertise() {
             Core <span className="gradient-text-accent">Specializations</span>
           </h2>
           <p className="text-[#94a3b8] max-w-2xl mx-auto leading-relaxed text-sm sm:text-base">
-            Engineered around production Knowledge Graphs (Neo4j), on-device LLMs (Ollama), multi-hop GraphRAG pipelines, and corporate AI architecture training.
+            A multidisciplinary technical foundation combining AI/ML engineering, data warehousing, Python backend services, and growth strategy — with a genuine passion for exploring GraphRAG and local LLM architectures.
           </p>
         </div>
 
         {/* Expertise grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {coreExpertise.map((item, i) => (
             <div
               key={item.label}
@@ -53,13 +51,13 @@ export default function Expertise() {
           ))}
         </div>
 
-        {/* Stats row reflecting actual CV background */}
+        {/* Stats row reflecting actual versatile background */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 p-6 rounded-2xl bg-[#111827]/40 border border-white/5">
           {[
             { value: "2 Years", label: "Gen AI & ML Engineer" },
-            { value: "1 Year", label: "Python Developer" },
-            { value: "3+ Years", label: "Total Engineering Exp" },
-            { value: "100%", label: "Context-Grounded Answers" },
+            { value: "1 Year", label: "Python & Data Dev" },
+            { value: "3+ Years", label: "Combined Engineering" },
+            { value: "5 Roles", label: "Versatile Designations" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-2xl sm:text-3xl font-bold gradient-text-accent mb-1">{stat.value}</div>

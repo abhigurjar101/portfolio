@@ -43,14 +43,14 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "nemi",
-    title: "Nemi — Local GraphRAG System",
+    title: "Nemi — Local GraphRAG Explorer",
     description:
-      "Built a fully local GraphRAG application using Ollama for on-device LLM inference, Neo4j knowledge graph modeling, and relationship-aware retrieval that decisively outperforms vector-only RAG.",
+      "Exploratory local GraphRAG application combining Ollama local LLMs with Neo4j entity-relation modeling to evaluate multi-hop question answering against baseline vector search.",
     longDescription:
-      "Nemi is a cutting-edge local GraphRAG system utilizing Ollama for on-device LLM inference, requiring no external API calls and keeping sensitive data 100% on-machine. Modeled document entities and relationships as a knowledge graph in Neo4j, enabling relationship-aware retrieval that decisively outperforms standard vector-only RAG on complex multi-hop queries. Designed the complete ingestion pipeline to extract entities/relations and combined graph traversal with local LLM generation for verifiable, context-grounded answers.",
+      "Nemi is an exploratory local GraphRAG implementation utilizing Ollama for on-device LLM inference, keeping sensitive data 100% on-machine without external API calls. Modeled document entities and relationships as a knowledge graph in Neo4j, enabling relationship-aware retrieval for complex multi-hop queries. Designed an ingestion pipeline to extract entities and relations, combining Cypher graph traversals with local LLM generation for verifiable, context-grounded answers.",
     humanExplanation: {
-      simpleConcept: "Think of regular AI search like looking up keywords in an index, while Nemi connects the dots like a detective board of clues, entities, and relationships — running completely on your laptop without sending a single byte to the internet.",
-      realWorldProblem: "Standard vector RAG fails when an answer requires connecting two separate facts across multiple documents. Plus, sending private company data to cloud AI APIs risks confidential data leaks.",
+      simpleConcept: "Think of regular AI search like looking up keywords in an index, while Nemi connects the dots like a detective board of clues, entities, and relationships — running completely on your laptop without sending data over the internet.",
+      realWorldProblem: "Standard vector RAG can struggle when an answer requires connecting separate facts across multiple documents. Plus, sending private enterprise notes to third-party cloud APIs risks privacy concerns.",
       howItWorks: "1) Scans documents on your device. 2) Extracts people, concepts, and relationships into Neo4j. 3) Traverses relationship paths (Multi-Hop) when you ask complex questions. 4) Synthesizes grounded answers using local Ollama (Llama 3).",
     },
     categories: ["AGENTIC AI", "ADVANCED", "GEN AI", "ADVANCED RAG", "KNOWLEDGE GRAPH", "RAG", "LLM"],
@@ -62,26 +62,26 @@ export const projects: Project[] = [
     glowTheme: "purple-gold",
     themeColor: "purple",
     highlights: [
-      "Built a fully local GraphRAG application using Ollama for on-device LLM inference, zero external API cost & zero data leakage",
+      "Built an exploratory local GraphRAG application using Ollama for on-device LLM inference and local data privacy",
       "Modeled document entities and relationships as a knowledge graph in Neo4j for relationship-aware retrieval",
-      "Superior accuracy on multi-hop queries compared to standard vector-only RAG",
-      "Combined graph traversal with local LLM generation for context-grounded answers",
+      "Evaluated multi-hop query accuracy against traditional vector-only semantic search",
+      "Combined graph traversal with local LLM generation for verifiable, grounded responses",
     ],
   },
   {
     id: "n8n-desktop-bots",
-    title: "n8n Desktop Bots — 9 Autonomous AI Agents (NVIDIA Nemotron)",
+    title: "n8n Desktop Automation & Multi-Agent Orchestrator",
     description:
-      "Production multi-agent desktop automation system orchestrating 9 specialized AI agents powered by NVIDIA Nemotron 3 Ultra 550B, Qdrant vector database, and 10,000+ n8n workflow integrations.",
+      "Desktop automation workbench orchestrating specialized AI agent roles with n8n workflow triggers, Qdrant vector retrieval, and local/cloud LLM reasoning.",
     longDescription:
-      "Architected an enterprise-level multi-agent desktop automation control center built on 10,000+ n8n community workflow patterns. Orchestrates 9 autonomous AI agents (Coding Assistant, Document RAG, System Design, High Thinking, Automated Testing, Advanced Hybrid RAG, Cloud Deployment, AI/ML Pipeline, and n8n Cluster Manager). Powered by NVIDIA Nemotron 3 Ultra 550B with Qdrant vector embeddings, Docker orchestration, and a real-time FastAPI telemetry control center.",
+      "Architected a modular multi-agent desktop automation control center integrating curated n8n workflow patterns. Orchestrates specialized AI worker agents (Coding Assistant, Document RAG, System Design, Automated Testing, Cloud Deployment, and Workflow Cluster Manager). Uses Qdrant for semantic workflow retrieval, Docker for isolated execution, and a FastAPI telemetry control center.",
     humanExplanation: {
-      simpleConcept: "Imagine having a team of 9 elite specialist AI assistants (a coder, a tester, an architect, a cloud engineer, etc.) working together on your desktop to plan, build, and deploy entire automated workflows without human babysitting.",
-      realWorldProblem: "Single AI chatbots get overwhelmed when asked to complete multi-step company workflows (e.g. testing code, configuring databases, creating cloud deployments).",
-      howItWorks: "1) Dispatching a task to the coordinator bot. 2) Breaking down goals into sub-tasks via Nemotron 550B. 3) Specialized bots execute their domain tasks in parallel via n8n workflows. 4) Validates results and outputs telemetry logs.",
+      simpleConcept: "A desktop control center where specialized AI assistants (coder, tester, system architect, cloud engineer) coordinate together to trigger and execute automated workflows.",
+      realWorldProblem: "Single general-purpose chatbots struggle to maintain focus across complex multi-step tasks like running unit tests, querying databases, and triggering webhooks in sequence.",
+      howItWorks: "1) Dispatching a task to the coordinator agent. 2) Breaking down goals into sub-tasks. 3) Specialized worker agents execute domain steps in parallel via n8n workflows. 4) Validates results and outputs telemetry logs.",
     },
     categories: ["AGENTIC AI", "ADVANCED", "GEN AI", "AI AGENTS"],
-    tech: ["NVIDIA Nemotron", "n8n Workflows", "Qdrant", "FastAPI", "Docker", "Python", "Autonomous Agents"],
+    tech: ["Llama 3.1", "n8n Workflows", "Qdrant", "FastAPI", "Docker", "Python", "Autonomous Agents"],
     github: "https://github.com/abhigurjar101/n8n-desktop-bots-automation",
     featured: true,
     language: "Python / TypeScript",
@@ -89,10 +89,10 @@ export const projects: Project[] = [
     glowTheme: "purple-gold",
     themeColor: "indigo",
     highlights: [
-      "Orchestrates 9 autonomous production AI bots across Coding, System Design, Testing, Cloud K8s, and ML Pipelines",
-      "Powered by NVIDIA Nemotron 3 Ultra 550B reasoning model with Qdrant hybrid vector embeddings",
-      "Built on 10,000+ curated n8n automation workflows with webhook triggers and real-time execution DAGs",
-      "Includes full web control center dashboard (FastAPI) and CLI runner for sub-second agent delegation",
+      "Orchestrates specialized agent roles across coding, testing, workflow automation, and infrastructure",
+      "Semantic workflow discovery and template matching powered by Qdrant vector database",
+      "Integrated with curated n8n automation workflows with webhook triggers and execution DAGs",
+      "Includes FastAPI web control center and CLI runner for structured agent task delegation",
     ],
   },
   {
@@ -182,10 +182,10 @@ export const projects: Project[] = [
     description:
       "Zero-server event-driven knowledge pipeline on AWS utilizing S3 triggers, Lambda processors, DynamoDB audit ledger, API Gateway, and Amazon Bedrock Foundation Models.",
     longDescription:
-      "Architected a production-ready serverless AI pipeline defined entirely as Infrastructure-as-Code via AWS SAM. Triggered by S3 object uploads, Lambda functions perform intelligent semantic chunking and embedding generation via Amazon Bedrock Titan, storing audit metadata in DynamoDB. User queries routed through Amazon API Gateway retrieve grounded context and invoke Bedrock (Claude 3.5 Sonnet) with sub-10ms citation responses.",
+      "Architected a production-ready serverless AI pipeline defined entirely as Infrastructure-as-Code via AWS SAM. Triggered by S3 object uploads, Lambda functions perform intelligent semantic chunking and embedding generation via Amazon Bedrock Titan, storing audit metadata in DynamoDB. User queries routed through Amazon API Gateway retrieve grounded context and invoke Bedrock (Claude 3.5 Sonnet) with fast, grounded citation responses.",
     humanExplanation: {
       simpleConcept: "An intelligent cloud pipeline where you drop any PDF contract into an Amazon S3 storage folder, and seconds later you can ask questions via API and get accurate, cited answers — costing $0 when nobody is using it.",
-      realWorldProblem: "Running always-on AI servers in the cloud costs thousands of dollars per month in idle server fees and requires continuous DevOps patching.",
+      realWorldProblem: "Running always-on AI servers in the cloud costs money in idle server fees and requires continuous DevOps patching.",
       howItWorks: "1) Document uploaded to S3. 2) S3 trigger fires AWS Lambda instantly. 3) Bedrock generates vector embeddings and stores status in DynamoDB. 4) Claude 3.5 answers queries with exact paragraph citations.",
     },
     categories: ["AWS", "GEN AI", "RAG", "BACKEND"],
@@ -197,10 +197,10 @@ export const projects: Project[] = [
     glowTheme: "silver-purple",
     themeColor: "amber",
     highlights: [
-      "Event-driven architecture triggered automatically by S3 ObjectCreated events for zero idle cost ($0/mo when idle)",
+      "Event-driven architecture triggered automatically by S3 ObjectCreated events, minimizing idle compute costs",
       "Automated semantic document chunking and vector embedding generation via Amazon Bedrock Titan",
       "Amazon DynamoDB On-Demand audit table storing processing status, chunk counts, and cryptographic hashes",
-      "Low-latency REST API Gateway endpoint delivering grounded citations and hallucination-free answers",
+      "Low-latency REST API Gateway endpoint delivering grounded citations and context-accurate answers",
     ],
   },
   {

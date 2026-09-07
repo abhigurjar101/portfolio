@@ -17,7 +17,7 @@ export default function Experience() {
             Professional <span className="gradient-text-accent">Experience</span>
           </h2>
           <p className="text-[#94a3b8] max-w-2xl mx-auto leading-relaxed text-xs sm:text-sm">
-            Proven track record separating dedicated Gen AI architecture delivery from foundational Python & data pipeline engineering.
+            A versatile track record uniting AI/ML engineering, robust backend system design, data warehousing, client relationship management, and organic growth.
           </p>
         </div>
 
@@ -32,7 +32,7 @@ export default function Experience() {
               <div className="flex items-center gap-2">
                 <span className="text-xl font-bold gradient-text-accent">2 Years</span>
                 <span className="text-[10px] px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 font-semibold uppercase tracking-wider">
-                  Gen AI Track
+                  Gen AI & System Design
                 </span>
               </div>
               <h3 className="text-sm font-semibold text-white mt-1">
@@ -42,7 +42,7 @@ export default function Experience() {
                 Ayush Bhandari LLP · Jun 2024 – Jul 2026
               </p>
               <p className="text-xs text-[#94a3b8] mt-2 leading-relaxed">
-                Architected & deployed production GraphRAG, Neo4j knowledge graphs, Ollama on-device pipelines, LangGraph, and decision-support systems.
+                Architected production retrieval pipelines, FastAPI backend services, LangGraph agents, and high-reliability decision-support automation.
               </p>
             </div>
           </div>
@@ -56,17 +56,17 @@ export default function Experience() {
               <div className="flex items-center gap-2">
                 <span className="text-xl font-bold text-emerald-400">1 Year</span>
                 <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-semibold uppercase tracking-wider">
-                  Python Track
+                  Python & Data Engineering
                 </span>
               </div>
               <h3 className="text-sm font-semibold text-white mt-1">
-                Python Developer
+                Python Developer & Data Analyst
               </h3>
               <p className="text-xs text-emerald-400 mt-0.5 font-mono">
                 Sopta Farms · Apr 2023 – May 2024
               </p>
               <p className="text-xs text-[#94a3b8] mt-2 leading-relaxed">
-                Engineered scalable Python ETL pipelines, automated multi-source data extraction, data warehousing, and ML-ready preprocessing.
+                Engineered automated Python ETL pipelines, normalized multi-source SQL data models, and built ML-ready analytical datasets.
               </p>
             </div>
           </div>

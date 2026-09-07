@@ -37,27 +37,27 @@ export default function Skills() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-14">
-          <p className="section-label mb-3">Balanced Technical Evaluation</p>
+          <p className="section-label mb-3">Realistic Technical & Business Evaluation</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Skills <span className="gradient-text-accent">Matrix</span>
           </h2>
           <p className="text-[#94a3b8] max-w-2xl mx-auto leading-relaxed text-xs sm:text-sm">
-            A transparent and realistic appraisal across core production specializations, supporting frameworks, and working knowledge tools.
+            An honest and grounded self-evaluation across AI engineering, data analytics, backend systems, growth marketing, and client solutions.
           </p>
 
           {/* Proficiency Legend */}
           <div className="flex flex-wrap items-center justify-center gap-3 mt-6">
             <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-[11px] text-indigo-300 font-medium">
               <span className="w-2 h-2 rounded-full bg-indigo-400 shadow-[0_0_6px_rgba(99,102,241,0.8)]" />
-              <span>Advanced / Production-Grade (85%–95%)</span>
+              <span>Daily Driver / Core Strength (82%–88%)</span>
             </div>
             <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-[11px] text-cyan-300 font-medium">
               <span className="w-2 h-2 rounded-full bg-cyan-400" />
-              <span>Proficient / Core (70%–84%)</span>
+              <span>Proficient / Production (74%–81%)</span>
             </div>
             <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-500/10 border border-slate-500/20 text-[11px] text-slate-300 font-medium">
               <span className="w-2 h-2 rounded-full bg-slate-400" />
-              <span>Working Knowledge / Average (50%–68%)</span>
+              <span>Working Knowledge / Exploring (60%–73%)</span>
             </div>
           </div>
         </div>

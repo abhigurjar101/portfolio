@@ -20,35 +20,32 @@ interface Edge {
 }
 
 const NODES: Omit<Node, "vx" | "vy">[] = [
-  { id: "rag", label: "RAG", x: 0.5, y: 0.5, r: 28, color: "#6366f1", primary: true },
-  { id: "adv-rag", label: "Advanced RAG", x: 0.3, y: 0.25, r: 22, color: "#818cf8", primary: true },
-  { id: "llm", label: "LLMs", x: 0.7, y: 0.25, r: 22, color: "#818cf8", primary: true },
-  { id: "kg", label: "Knowledge\nGraphs", x: 0.2, y: 0.6, r: 20, color: "#a78bfa", primary: false },
-  { id: "agents", label: "AI Agents", x: 0.8, y: 0.6, r: 20, color: "#a78bfa", primary: false },
-  { id: "backend", label: "Backend", x: 0.5, y: 0.8, r: 18, color: "#7c3aed", primary: false },
-  { id: "ml", label: "ML", x: 0.2, y: 0.85, r: 16, color: "#7c3aed", primary: false },
-  { id: "aws", label: "AWS Cloud", x: 0.8, y: 0.85, r: 16, color: "#7c3aed", primary: false },
-  { id: "nlp", label: "NLP", x: 0.1, y: 0.4, r: 14, color: "#6366f1", primary: false },
-  { id: "cv", label: "CV", x: 0.9, y: 0.4, r: 14, color: "#6366f1", primary: false },
-  { id: "python", label: "Python", x: 0.5, y: 0.15, r: 18, color: "#818cf8", primary: false },
+  { id: "ai-ml", label: "AI & ML\nEngineer", x: 0.5, y: 0.45, r: 26, color: "#6366f1", primary: true },
+  { id: "data", label: "Data\nAnalytics", x: 0.3, y: 0.28, r: 22, color: "#06b6d4", primary: true },
+  { id: "backend", label: "Python\nBackend", x: 0.7, y: 0.28, r: 22, color: "#10b981", primary: true },
+  { id: "marketing", label: "Marketing\n& SEO", x: 0.22, y: 0.65, r: 20, color: "#f59e0b", primary: false },
+  { id: "solutions", label: "System Design\n& Solutions", x: 0.78, y: 0.65, r: 20, color: "#d946ef", primary: false },
+  { id: "graphrag", label: "GraphRAG\n(Exploring)", x: 0.38, y: 0.82, r: 18, color: "#818cf8", primary: false },
+  { id: "rag", label: "RAG\nPipelines", x: 0.5, y: 0.18, r: 18, color: "#818cf8", primary: false },
+  { id: "llm", label: "Local LLMs\n(Ollama)", x: 0.62, y: 0.82, r: 18, color: "#a855f7", primary: false },
+  { id: "sql", label: "SQL Data\nWarehouse", x: 0.12, y: 0.42, r: 16, color: "#06b6d4", primary: false },
+  { id: "aws", label: "AWS\nCloud", x: 0.88, y: 0.42, r: 16, color: "#10b981", primary: false },
 ];
 
 const EDGES: Edge[] = [
-  { source: "rag", target: "adv-rag" },
-  { source: "rag", target: "llm" },
-  { source: "rag", target: "kg" },
-  { source: "rag", target: "agents" },
-  { source: "rag", target: "backend" },
-  { source: "adv-rag", target: "nlp" },
-  { source: "adv-rag", target: "python" },
-  { source: "llm", target: "agents" },
-  { source: "llm", target: "python" },
-  { source: "llm", target: "cv" },
-  { source: "kg", target: "ml" },
-  { source: "agents", target: "aws" },
+  { source: "ai-ml", target: "data" },
+  { source: "ai-ml", target: "backend" },
+  { source: "ai-ml", target: "graphrag" },
+  { source: "ai-ml", target: "rag" },
+  { source: "ai-ml", target: "llm" },
+  { source: "data", target: "sql" },
+  { source: "data", target: "marketing" },
   { source: "backend", target: "aws" },
-  { source: "backend", target: "ml" },
-  { source: "python", target: "backend" },
+  { source: "backend", target: "solutions" },
+  { source: "solutions", target: "ai-ml" },
+  { source: "marketing", target: "data" },
+  { source: "graphrag", target: "rag" },
+  { source: "llm", target: "graphrag" },
 ];
 
 export default function KnowledgeGraph() {
@@ -161,7 +158,7 @@ export default function KnowledgeGraph() {
             Knowledge <span className="gradient-text-accent">Graph</span>
           </h2>
           <p className="text-[#94a3b8] max-w-md mx-auto text-sm leading-relaxed">
-            A live visualization of how my skills interconnect across the Gen AI domain.
+            A live dynamic map showing how AI/ML engineering, data analytics, backend services, and growth strategy interconnect.
           </p>
         </div>
 

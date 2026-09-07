@@ -414,25 +414,25 @@ function NemiRunner({ project }: { project: Project }) {
 }
 
 /* ------------------------------------------------------------------------- */
-/* N8N BOTS (9 AUTONOMOUS AGENTS + NEMOTRON 3 ULTRA 550B)                    */
+/* N8N BOTS (MODULAR WORKER AGENTS + LLAMA 3.1 & QDRANT)                     */
 /* ------------------------------------------------------------------------- */
 function N8nBotsRunner({ project }: { project: Project }) {
   const agents = [
-    { name: "Coding Assistant Bot", model: "Nemotron 3 Ultra 550B", role: "AST & Test Suite Synthesizer", tools: ["ast-grep", "pytest", "mypy"] },
-    { name: "Document RAG Bot", model: "Nemotron 3 Ultra 550B", role: "Qdrant Hybrid Vector Indexer", tools: ["qdrant-client", "pypdf", "cross-encoder"] },
-    { name: "System Design Bot", model: "Nemotron 3 Ultra 550B", role: "Mermaid DAG & Latency Architect", tools: ["mermaid-cli", "plantuml", "bench"] },
-    { name: "High Thinking Agent", model: "Nemotron 3 Ultra 550B", role: "Extended Chain-of-Thought Reasoner", tools: ["tot-search", "co-verification"] },
-    { name: "Automated Testing Bot", model: "Nemotron 3 Ultra 550B", role: "Playwright E2E & Regressions", tools: ["playwright", "cypress", "junit"] },
-    { name: "Advanced Hybrid RAG", model: "Nemotron 3 Ultra 550B", role: "BM25 Sparse + Dense Embedding Rerank", tools: ["bm25s", "fastembed", "splade"] },
-    { name: "Cloud Deployment Bot", model: "Nemotron 3 Ultra 550B", role: "Kubernetes & AWS ECS Orchestrator", tools: ["helm", "kubectl", "terraform"] },
-    { name: "AI/ML Pipeline Bot", model: "Nemotron 3 Ultra 550B", role: "W&B Experiment Tracker & Model Eval", tools: ["wandb", "torch-opt", "onnx"] },
-    { name: "n8n Cluster Manager", model: "Nemotron 3 Ultra 550B", role: "10,000+ Community Workflow Router", tools: ["webhook-lb", "queue-redis"] },
+    { name: "Coding Assistant Bot", model: "Llama 3.1 8B", role: "AST & Test Suite Synthesizer", tools: ["ast-grep", "pytest", "mypy"] },
+    { name: "Document RAG Bot", model: "Llama 3.1 8B", role: "Qdrant Hybrid Vector Indexer", tools: ["qdrant-client", "pypdf", "cross-encoder"] },
+    { name: "System Design Bot", model: "Llama 3.1 70B", role: "Mermaid DAG & Latency Architect", tools: ["mermaid-cli", "plantuml", "bench"] },
+    { name: "High Thinking Agent", model: "Llama 3.1 70B", role: "Extended Chain-of-Thought Reasoner", tools: ["tot-search", "co-verification"] },
+    { name: "Automated Testing Bot", model: "Llama 3.1 8B", role: "Playwright E2E & Regressions", tools: ["playwright", "cypress", "junit"] },
+    { name: "Advanced Hybrid RAG", model: "Llama 3.1 8B", role: "BM25 Sparse + Dense Embedding Rerank", tools: ["bm25s", "fastembed", "splade"] },
+    { name: "Cloud Deployment Bot", model: "Llama 3.1 8B", role: "Kubernetes & AWS ECS Orchestrator", tools: ["helm", "kubectl", "terraform"] },
+    { name: "AI/ML Pipeline Bot", model: "Llama 3.1 8B", role: "W&B Experiment Tracker & Model Eval", tools: ["wandb", "torch-opt", "onnx"] },
+    { name: "n8n Cluster Manager", model: "Llama 3.1 8B", role: "Curated Automation Workflow Router", tools: ["webhook-lb", "queue-redis"] },
   ];
 
   const [selectedAgent, setSelectedAgent] = useState(agents[0]);
   const [isRunning, setIsRunning] = useState(false);
   const [traceLogs, setTraceLogs] = useState<string[]>([
-    "Agent initialized: Coding Assistant Bot [Nemotron 3 Ultra 550B]",
+    "Agent initialized: Coding Assistant Bot [Llama 3.1 8B]",
     "Listening on n8n Webhook: /webhook/v1/agent-dispatch",
     "Loaded tools: ast-grep, pytest, mypy",
     "Status: IDLE (Awaiting dispatch payload)",
@@ -445,7 +445,7 @@ function N8nBotsRunner({ project }: { project: Project }) {
     setTimeout(() => {
       setTraceLogs((prev) => [
         ...prev,
-        `[00.12s] Nemotron 3 Ultra 550B Planning Step: Ingesting task requirements and generating execution DAG.`,
+        `[00.12s] Planning Step: Ingesting task requirements and generating execution DAG.`,
       ]);
     }, 250);
 
@@ -465,13 +465,13 @@ function N8nBotsRunner({ project }: { project: Project }) {
       <div className="p-4 rounded-xl bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-transparent border border-indigo-500/20 flex items-center justify-between">
         <div>
           <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-400">
-            Enterprise Multi-Agent Desktop Control Center
+            Multi-Agent Desktop Automation Workbench
           </span>
           <h3 className="text-base font-semibold text-white mt-0.5">
-            9 Autonomous Production Agents (NVIDIA Nemotron 3 Ultra 550B)
+            Specialized Autonomous Worker Agents (Llama 3.1 & Qdrant)
           </h3>
           <p className="text-xs text-[#94a3b8] mt-1">
-            Built on 10,000+ curated n8n automation workflow patterns with Qdrant vector memory and sub-second delegation.
+            Built with curated n8n automation workflow patterns, Qdrant vector memory, and structured task delegation.
           </p>
         </div>
       </div>
@@ -874,7 +874,7 @@ function AdvancedNlpRunner() {
           <div className="grid gap-2 text-xs">
             <div className="p-3 rounded-lg bg-indigo-950/20 border border-indigo-500/30 text-[#e0e7ff]">
               <span className="text-[10px] font-mono text-indigo-400 block mb-1">CHUNK #1 [THEME: ARCHITECTURE DESIGN]</span>
-              &ldquo;Abhi Gurjar engineered an autonomous multi-agent automation platform using NVIDIA Nemotron 3 Ultra 550B. The system orchestrates 9 specialized bots using Qdrant vector memory and Docker containers.&rdquo;
+              &ldquo;Abhi Gurjar engineered an autonomous multi-agent automation platform using Llama 3.1 & Qdrant vector memory. The system orchestrates specialized worker bots within modular Docker containers.&rdquo;
             </div>
             <div className="p-3 rounded-lg bg-cyan-950/20 border border-cyan-500/30 text-[#e0f2fe]">
               <span className="text-[10px] font-mono text-cyan-400 block mb-1">CHUNK #2 [THEME: RELATIONAL DATA WAREHOUSE]</span>

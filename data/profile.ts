@@ -1,10 +1,10 @@
 export const profile = {
   name: "Abhi Kumar Gurjar",
-  title: "Sr Gen AI & ML Engineer & Trainer",
-  roleHeadline: "SR GEN AI & ML ENGINEER & TRAINER",
-  headline: "RAG · GraphRAG · Neo4j · LLMs · Ollama · Python · LangGraph · Vector DBs",
+  title: "AI/ML Engineer · Data Analyst · Python & Growth Architect",
+  roleHeadline: "AI/ML ENGINEER · DATA ANALYST · GROWTH & SYSTEM DESIGN",
+  headline: "Applied Machine Learning · SQL & Data Warehousing · Python Backends · Growth & SEO · Modern Retrieval",
   subheadline:
-    "Generative AI Engineer with 2 Years of experience building production GraphRAG & RAG systems (Neo4j, Ollama, LangGraph) and 1 Year of experience as a Python Developer engineering scalable ETL pipelines & backend services.",
+    "Multidisciplinary builder with 3+ years of combined experience across Machine Learning, Data Analytics, Python backend services, and Growth Marketing. Genuinely enjoys exploring emerging paradigms like GraphRAG, Local LLMs, and Multi-Agent workflows, while keeping production systems practical, reliable, and closely aligned with real business ROI.",
   email: "abhigurjar101@gmail.com",
   phone: "+91 8868822114",
   location: "New Delhi, India",
@@ -15,8 +15,40 @@ export const profile = {
   resume: "/resume.pdf",
   offerLetter: "/documents/techeon-offer-letter.pdf",
   available: true,
-  tagline: "Architecting verifiable, relationship-grounded GraphRAG systems.",
+  tagline: "Bridging intelligent algorithms with real-world business growth & clean architecture.",
   repos: 22,
+  designations: [
+    {
+      title: "AI & Machine Learning Engineer",
+      desc: "Applied ML modeling (Scikit-learn, XGBoost), NLP transformers, edge computer vision prototypes, and local LLM integration.",
+      badge: "AI/ML Core",
+      color: "purple",
+    },
+    {
+      title: "Data Analyst & Analytics Engineer",
+      desc: "Star-schema dimensional warehouses, DuckDB in-memory querying, customer RFM segmentation, and 90-day cohort retention.",
+      badge: "Data & BI",
+      color: "cyan",
+    },
+    {
+      title: "Full Stack / Backend Python Developer",
+      desc: "Containerized FastAPI microservices, modular OOP architectures, robust relational database design, and automated ETL pipelines.",
+      badge: "Backend",
+      color: "indigo",
+    },
+    {
+      title: "Marketing & SEO Growth Strategist",
+      desc: "CTR predictive modeling, YouTube video audience telemetry, search keyword strategy, and conversion funnel optimization.",
+      badge: "Growth & SEO",
+      color: "rose",
+    },
+    {
+      title: "Client Solutions Architect & System Designer",
+      desc: "Translating ambiguous client needs into scalable system design, corporate AI upskilling at Uncodemy, and CRM automation.",
+      badge: "Solutions & CRM",
+      color: "emerald",
+    },
+  ],
   experienceTracks: {
     genAi: "2 Years",
     python: "1 Year",
@@ -43,9 +75,9 @@ export const profile = {
       status: "Postgraduate Master's Degree (Research Track)",
       details:
         "Advanced master's degree research focused on Graph Neural Networks, Relational Knowledge Graphs, GraphRAG optimization, and autonomous multi-agent reasoning systems.",
-      badges: ["Professor Endorsed", "LJMU Postgraduate Scholar", "GraphRAG Research Track"],
+      badges: ["Professor Endorsed", "LJMU Postgraduate Scholar", "Applied AI Research"],
       facultyAcknowledgment:
-        "Formally acknowledged by academic supervisors for applied research excellence in Graph-grounded Retrieval-Augmented Generation (GraphRAG) and enterprise agentic workflows.",
+        "Formally acknowledged by academic supervisors for applied research in Graph-grounded Retrieval-Augmented Generation (GraphRAG) and enterprise agentic workflows.",
     },
     {
       degree: "B.Tech in Computer Science & Engineering (Artificial Intelligence)",

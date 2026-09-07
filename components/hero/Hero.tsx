@@ -8,12 +8,12 @@ import OfferLetterModal from "@/components/ui/OfferLetterModal";
 import Image from "next/image";
 
 const roles = [
-  "Sr Gen AI & ML Engineer & Trainer",
+  "AI & Machine Learning Engineer",
+  "Data Analyst & Analytics Engineer",
+  "Full Stack & Backend Python Developer",
+  "Marketing & SEO Growth Strategist",
+  "Client Solutions Architect & System Designer",
   "IIIT-Bangalore & LJMU (UK) in AI & ML",
-  "GraphRAG & Knowledge Graph Specialist",
-  "Production RAG & Neo4j Architect",
-  "Local LLMs (Ollama) & Agentic AI Engineer",
-  "Enterprise AI & Data Science Trainer",
 ];
 
 export default function Hero() {
@@ -158,9 +158,9 @@ export default function Hero() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.08] tracking-tight">
               <span className="text-white">{profile.name}</span>
               <br />
-              <span className="gradient-text">Production GraphRAG</span>
+              <span className="gradient-text">Engineering AI, Data</span>
               <br />
-              <span className="gradient-text-accent">& LLM Architect.</span>
+              <span className="gradient-text-accent">& Scalable Systems.</span>
             </h1>
 
             {/* Small Tagline in Minimalist Format */}
@@ -179,18 +179,16 @@ export default function Hero() {
             </span>
           </div>
 
-          {/* Tag pills from exact CV Core Skills */}
+          {/* Tag pills from balanced multi-disciplinary skillsets */}
           <div className="flex flex-wrap gap-2">
             {[
-              "GraphRAG",
-              "Neo4j",
-              "RAG",
-              "FAISS / Qdrant",
-              "Ollama (Local LLMs)",
-              "LangChain / LangGraph",
-              "Python",
-              "AWS & Cloud",
-              "Ontology Design",
+              "AI & Machine Learning",
+              "Data Analytics & SQL",
+              "Python Backend",
+              "Marketing Analytics & SEO",
+              "Client Solutions & System Design",
+              "GraphRAG & Knowledge Graphs",
+              "AWS Cloud",
             ].map((tag) => (
               <span
                 key={tag}
@@ -205,13 +203,13 @@ export default function Hero() {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 p-3 rounded-xl border border-white/10 bg-[#0d121c]/90 backdrop-blur-md shadow-lg">
             <div className="flex flex-col p-2 rounded-lg bg-indigo-950/20 border border-indigo-500/20">
               <span className="text-lg sm:text-xl font-bold gradient-text-accent">2 Years</span>
-              <span className="text-xs font-semibold text-white mt-0.5">Gen AI Engineer</span>
-              <span className="text-[10px] text-[#94a3b8] mt-0.5 leading-tight">GraphRAG, Neo4j, Ollama, LangGraph</span>
+              <span className="text-xs font-semibold text-white mt-0.5">Gen AI & ML Engineer</span>
+              <span className="text-[10px] text-[#94a3b8] mt-0.5 leading-tight">Retrieval Pipelines, Ollama, LangGraph</span>
             </div>
             <div className="flex flex-col p-2 rounded-lg bg-emerald-950/20 border border-emerald-500/20">
               <span className="text-lg sm:text-xl font-bold text-emerald-400">1 Year</span>
-              <span className="text-xs font-semibold text-white mt-0.5">Python Developer</span>
-              <span className="text-[10px] text-[#94a3b8] mt-0.5 leading-tight">ETL Pipelines, Data Warehousing, APIs</span>
+              <span className="text-xs font-semibold text-white mt-0.5">Python & Data Developer</span>
+              <span className="text-[10px] text-[#94a3b8] mt-0.5 leading-tight">ETL Pipelines, SQL Warehousing, APIs</span>
             </div>
             <div className="col-span-2 sm:col-span-1 flex flex-col p-2 rounded-lg bg-white/3 border border-white/5 justify-center">
               <span className="text-lg sm:text-xl font-bold text-slate-200">3+ Years</span>
@@ -224,6 +222,43 @@ export default function Hero() {
           <p className="text-[#94a3b8] text-xs sm:text-sm leading-relaxed max-w-2xl">
             {profile.subheadline}
           </p>
+
+          {/* Featured 5 Designations & Capabilities Grid */}
+          <div className="pt-2">
+            <div className="flex items-center gap-2 mb-2">
+              <Sparkles size={13} className="text-[#a5b4fc]" />
+              <span className="text-[11px] font-semibold text-[#a5b4fc] tracking-wider uppercase font-mono">
+                Target Roles & Versatile Designations
+              </span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+              {profile.designations.map((d) => {
+                const colorClasses =
+                  d.color === "purple"
+                    ? "from-purple-950/30 to-indigo-950/20 border-purple-500/25"
+                    : d.color === "cyan"
+                    ? "from-cyan-950/30 to-blue-950/20 border-cyan-500/25"
+                    : d.color === "indigo"
+                    ? "from-indigo-950/30 to-slate-900/40 border-indigo-500/25"
+                    : d.color === "rose"
+                    ? "from-rose-950/30 to-amber-950/20 border-rose-500/25"
+                    : "from-emerald-950/30 to-teal-950/20 border-emerald-500/25";
+
+                return (
+                  <div
+                    key={d.title}
+                    className={`p-2.5 rounded-lg border bg-gradient-to-br ${colorClasses} backdrop-blur-sm transition-all hover:border-white/20`}
+                  >
+                    <span className="text-[9px] font-mono uppercase tracking-wider px-1.5 py-0.5 rounded bg-black/40 text-white/90 inline-block mb-1">
+                      {d.badge}
+                    </span>
+                    <h4 className="text-xs font-bold text-white leading-snug">{d.title}</h4>
+                    <p className="text-[11px] text-[#94a3b8] mt-1 leading-snug">{d.desc}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
 
           {/* Action Row with Offer Letter Modal */}
           <div className="flex flex-wrap items-center gap-3 pt-1">
@@ -322,22 +357,22 @@ export default function Hero() {
               />
             </div>
 
-            {/* Floating badge: GraphRAG */}
+            {/* Floating badge: AI & ML Systems */}
             <div className="absolute -bottom-3 -left-6 px-3.5 py-1.5 rounded-lg bg-[#111827] border border-indigo-500/40 shadow-xl flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-ping" />
-              <span className="text-xs font-bold text-[#818cf8] tracking-wider">GraphRAG + Neo4j</span>
+              <span className="text-xs font-bold text-[#818cf8] tracking-wider">AI & ML Engineer</span>
             </div>
 
-            {/* Floating badge: Ollama Local LLMs */}
+            {/* Floating badge: Data & Systems */}
             <div className="absolute -top-3 -right-4 px-3.5 py-1.5 rounded-lg bg-[#111827] border border-emerald-500/40 shadow-xl flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-              <span className="text-xs font-bold text-emerald-400 tracking-wider">Ollama Local LLMs</span>
+              <span className="text-xs font-bold text-emerald-400 tracking-wider">Data & Systems</span>
             </div>
 
-            {/* Floating badge: Corporate Trainer */}
+            {/* Floating badge: Client Solutions & Growth */}
             <div className="absolute top-1/2 -left-12 -translate-y-1/2 hidden sm:flex px-3 py-1.5 rounded-lg bg-[#111827]/95 border border-purple-500/30 shadow-xl items-center gap-1.5">
               <ShieldCheck size={13} className="text-purple-400" />
-              <span className="text-[11px] font-semibold text-purple-300">Sr. AI Trainer</span>
+              <span className="text-[11px] font-semibold text-purple-300">Solutions & Growth</span>
             </div>
           </div>
         </div>
