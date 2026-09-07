@@ -7,7 +7,7 @@ import { GithubIcon } from "@/components/ui/SocialIcons";
 import { cn } from "@/lib/utils";
 
 const ALL_CATEGORIES: ProjectCategory[] = [
-  "ALL", "GEN AI", "RAG", "ADVANCED RAG", "KNOWLEDGE GRAPH", "LLM", "AI AGENTS", "ML", "NLP", "BACKEND"
+  "ALL", "GEN AI", "RAG", "ADVANCED RAG", "KNOWLEDGE GRAPH", "COMPUTER VISION", "LLM", "AI AGENTS", "ML", "NLP", "BACKEND"
 ];
 
 export default function Projects() {
