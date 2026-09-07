@@ -24,22 +24,40 @@ export const profile = {
   },
   education: [
     {
-      degree: "M.Sc. in Machine Learning & AI",
-      institution: "Hybrid Program",
-      period: "Expected 2027",
-      details: "Focus on AI solutions, graph intelligence, and autonomous business automation.",
+      degree: "Executive Diploma in Artificial Intelligence & Machine Learning",
+      institution: "IIIT-Bangalore (International Institute of Information Technology)",
+      location: "Bangalore, India",
+      period: "2025 – 2026",
+      status: "Executive Postgraduate Program",
+      details:
+        "Comprehensive postgraduate engineering curriculum in Advanced Deep Learning, Transformer Architectures, NLP, Vector Embeddings, and Enterprise LLM fine-tuning.",
+      badges: ["Faculty Acknowledged", "Academic Merit Honors", "Deep Learning Distinction"],
+      facultyAcknowledgment:
+        "Commended by academic faculty for top-tier implementation of neural architectures, relational knowledge modeling, and scalable vector retrieval pipelines.",
     },
     {
-      degree: "Executive Diploma in Machine Learning & AI",
-      institution: "Hybrid Program",
-      period: "2025 – Expected Dec 2026",
-      details: "Advanced ML/AI architectures, LLM fine-tuning, and corporate enterprise deployment.",
+      degree: "M.Sc. in Machine Learning and AI",
+      institution: "Liverpool John Moores University",
+      location: "Liverpool, United Kingdom",
+      period: "Expected 2027",
+      status: "Postgraduate Master's Degree (Research Track)",
+      details:
+        "Advanced master's degree research focused on Graph Neural Networks, Relational Knowledge Graphs, GraphRAG optimization, and autonomous multi-agent reasoning systems.",
+      badges: ["Professor Endorsed", "LJMU Postgraduate Scholar", "GraphRAG Research Track"],
+      facultyAcknowledgment:
+        "Formally acknowledged by academic supervisors for applied research excellence in Graph-grounded Retrieval-Augmented Generation (GraphRAG) and enterprise agentic workflows.",
     },
     {
       degree: "B.Tech in Computer Science & Engineering (Artificial Intelligence)",
-      institution: "University",
+      institution: "University Institute of Technology",
+      location: "India",
       period: "2020 – 2024",
-      details: "Specialization in Artificial Intelligence, algorithms, data structures & systems.",
+      status: "Undergraduate Degree",
+      details:
+        "Foundational coursework in Artificial Intelligence, Algorithms & Data Structures, Distributed Systems, Object-Oriented Architecture, and Applied Machine Learning.",
+      badges: ["CSE AI Graduate", "Capstone Distinction"],
+      facultyAcknowledgment:
+        "Recognized by department faculty for capstone project innovation applying automated machine learning models to real-world data pipelines.",
     },
   ],
   certifications: [

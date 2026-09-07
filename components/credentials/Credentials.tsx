@@ -1,7 +1,7 @@
 "use client";
 
 import { profile } from "@/data/profile";
-import { GraduationCap, Award, CheckCircle2, ShieldCheck, ArrowUpRight } from "lucide-react";
+import { GraduationCap, Award, CheckCircle2, ShieldCheck, ArrowUpRight, Quote } from "lucide-react";
 import OfferLetterModal from "@/components/ui/OfferLetterModal";
 
 export default function Credentials() {
@@ -46,28 +46,82 @@ export default function Credentials() {
         </div>
 
         {/* Two-column layout: Education & Certifications */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 items-start">
           {/* Education Column */}
           <div className="flex flex-col gap-5">
-            <div className="flex items-center gap-2.5 pb-3 border-b border-white/5">
-              <GraduationCap size={20} className="text-[#818cf8]" />
-              <h3 className="text-lg font-bold text-white tracking-wide">Education</h3>
+            <div className="flex items-center justify-between pb-3 border-b border-white/5">
+              <div className="flex items-center gap-2.5">
+                <GraduationCap size={20} className="text-[#818cf8]" />
+                <h3 className="text-lg font-bold text-white tracking-wide">Academic Credentials</h3>
+              </div>
+              <span className="text-[10.5px] font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#6366f1]/10 text-[#a5b4fc] border border-[#6366f1]/25">
+                Faculty Endorsed
+              </span>
             </div>
 
             <div className="flex flex-col gap-4">
               {profile.education.map((item, idx) => (
                 <div
                   key={idx}
-                  className="card-glass rounded-xl p-5 border border-white/5 hover:border-[#6366f1]/30 transition-all duration-300 flex flex-col gap-2"
+                  className="card-glass rounded-xl p-5 sm:p-6 border border-white/10 hover:border-[#6366f1]/40 transition-all duration-300 flex flex-col justify-between gap-3 relative overflow-hidden group shadow-lg"
                 >
-                  <div className="flex items-start justify-between gap-3">
-                    <h4 className="text-sm font-bold text-white leading-snug">{item.degree}</h4>
-                    <span className="text-[11px] font-mono text-[#818cf8] shrink-0 bg-[#6366f1]/10 px-2 py-0.5 rounded border border-[#6366f1]/20">
-                      {item.period}
-                    </span>
+                  {/* Subtle top indicator beam */}
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#6366f1]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                  {/* Degree title & Period */}
+                  <div>
+                    <div className="flex items-start justify-between gap-3 mb-1">
+                      <h4 className="text-sm sm:text-base font-bold text-white leading-snug">
+                        {item.degree}
+                      </h4>
+                      <span className="text-[10.5px] font-mono text-[#818cf8] shrink-0 bg-[#6366f1]/10 px-2.5 py-0.5 rounded-full border border-[#6366f1]/25">
+                        {item.period}
+                      </span>
+                    </div>
+
+                    {/* Institution & Location */}
+                    <div className="flex items-center gap-2 text-xs font-semibold text-[#a5b4fc] mb-2">
+                      <span>{item.institution}</span>
+                      <span className="text-white/20">•</span>
+                      <span className="text-[#94a3b8] font-normal">{item.location}</span>
+                    </div>
+
+                    <p className="text-xs text-[#94a3b8] leading-relaxed">{item.details}</p>
                   </div>
-                  <p className="text-xs text-[#94a3b8]">{item.institution}</p>
-                  <p className="text-xs text-[#475569] leading-relaxed mt-1">{item.details}</p>
+
+                  {/* Professor Badges & Faculty Acknowledgment */}
+                  <div className="pt-3 border-t border-white/5 flex flex-col gap-2.5">
+                    {/* Badges strip */}
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      {item.badges.map((badge, bIdx) => (
+                        <span
+                          key={bIdx}
+                          className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-[#111827] border border-white/10 text-[10px] font-medium text-[#cbd5e1] group-hover:border-[#6366f1]/30 transition-colors"
+                        >
+                          {bIdx === 0 ? (
+                            <ShieldCheck size={11} className="text-emerald-400 shrink-0" />
+                          ) : (
+                            <Award size={11} className="text-[#818cf8] shrink-0" />
+                          )}
+                          <span>{badge}</span>
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Professor / Faculty Acknowledgment Quote Block */}
+                    <div className="p-3 rounded-lg bg-[#0a0e17]/80 border border-white/5 flex items-start gap-2.5">
+                      <Quote size={13} className="text-[#818cf8] shrink-0 mt-0.5 opacity-80" />
+                      <div className="flex-1">
+                        <p className="text-[11px] text-[#cbd5e1] leading-relaxed italic">
+                          &ldquo;{item.facultyAcknowledgment}&rdquo;
+                        </p>
+                        <div className="flex items-center gap-1.5 mt-1.5 text-[9.5px] font-semibold tracking-wider uppercase text-emerald-400">
+                          <CheckCircle2 size={11} />
+                          <span>Acknowledged by Academic Faculty</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
