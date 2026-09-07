@@ -45,9 +45,9 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-8 max-w-6xl mx-auto items-start">
+        <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 max-w-6xl mx-auto items-stretch">
           {/* Column 1: Contact Details & Verifications */}
-          <div className="md:col-span-1 lg:col-span-4 flex flex-col gap-6">
+          <div className="md:col-span-1 lg:col-span-5 card-glass rounded-2xl p-6 border border-white/10 flex flex-col justify-between gap-6">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 mb-3">
                 <span className="w-2 h-2 rounded-full bg-emerald-400" />
@@ -56,7 +56,7 @@ export default function Contact() {
                 </span>
               </div>
               <h3 className="text-2xl font-bold text-white mb-1">{profile.name}</h3>
-              <p className="text-[#818cf8] font-medium text-sm mb-3">{profile.title}</p>
+              <p className="text-[#818cf8] font-medium text-xs sm:text-sm mb-3">{profile.title}</p>
               <p className="text-[#94a3b8] leading-relaxed text-xs sm:text-sm">
                 Specialized in deploying local and cloud-native RAG & GraphRAG architectures (Neo4j, Ollama, LangGraph, Qdrant). Let&apos;s discuss how I can lead or accelerate your GenAI initiatives.
               </p>
@@ -95,18 +95,6 @@ export default function Contact() {
                 <span>github.com/abhigurjar101</span>
               </a>
 
-              <a
-                href={profile.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 text-xs sm:text-sm text-[#cbd5e1] hover:text-white transition-colors group"
-              >
-                <div className="w-8 h-8 rounded-lg bg-[#111827] border border-white/5 flex items-center justify-center text-[#818cf8] group-hover:border-[#6366f1]/40 transition-colors shrink-0">
-                  <LinkedinIcon size={14} />
-                </div>
-                <span>linkedin.com/in/abhi-gurjar-b13067203</span>
-              </a>
-
               <div className="flex items-center gap-3 text-xs sm:text-sm text-[#94a3b8]">
                 <div className="w-8 h-8 rounded-lg bg-[#111827] border border-white/5 flex items-center justify-center text-[#64748b] shrink-0">
                   <MapPin size={14} />
@@ -116,7 +104,7 @@ export default function Contact() {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap items-center gap-2.5 pt-2">
+            <div className="flex flex-wrap items-center gap-2.5 pt-2 border-t border-white/5">
               <a
                 href={profile.resume}
                 download
@@ -130,13 +118,13 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Column 2: Official LinkedIn Profile Badge */}
-          <div className="md:col-span-1 lg:col-span-4 flex flex-col justify-center">
+          {/* Column 2: Official LinkedIn Profile Badge (Shining & Perfectly Fitted) */}
+          <div className="md:col-span-1 lg:col-span-3 flex flex-col items-center justify-center">
             <LinkedInBadge />
           </div>
 
           {/* Column 3: Contact Form */}
-          <form onSubmit={handleSubmit} className="md:col-span-2 lg:col-span-4 card-glass rounded-xl p-6 flex flex-col gap-4 border border-white/5">
+          <form onSubmit={handleSubmit} className="md:col-span-2 lg:col-span-4 card-glass rounded-2xl p-6 flex flex-col justify-between gap-4 border border-white/10">
             <div>
               <label className="block text-[11px] text-[#94a3b8] mb-1 tracking-wider uppercase font-medium">Your Name</label>
               <input

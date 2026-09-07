@@ -135,33 +135,75 @@ body {
   justify-content: center !important;
   align-items: center !important;
   width: 100% !important;
-  max-width: 320px !important;
   margin: 0 auto !important;
+  position: relative !important;
 }
 
 .LI-profile-badge iframe {
+  width: 250px !important;
   max-width: 100% !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+  border-radius: 8px !important;
+  display: block !important;
+  margin: 0 auto !important;
+  background: #000000 !important;
+  border: none !important;
 }
 
-.badge-base__link.LI-simple-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  background: rgba(99, 102, 241, 0.15);
-  border: 1px solid rgba(99, 102, 241, 0.35);
-  border-radius: 8px;
-  color: #c7d2fe;
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.2s ease;
+/* Hide fallback link cleanly so it never peeks out or leaks text */
+.LI-profile-badge .badge-base__link,
+.LI-profile-badge .LI-simple-link {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
-.badge-base__link.LI-simple-link:hover {
-  background: rgba(99, 102, 241, 0.3);
-  color: #ffffff;
-  border-color: rgba(99, 102, 241, 0.6);
+/* Shine Sweep Keyframe Animation */
+@keyframes shineSweep {
+  0% {
+    transform: translateX(-160%) skewX(-20deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.65;
+  }
+  60% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translateX(260%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.badge-shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.badge-shine-effect::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.06) 45%,
+    rgba(99, 102, 241, 0.3) 50%,
+    rgba(56, 189, 248, 0.25) 55%,
+    transparent 65%
+  );
+  animation: shineSweep 4.5s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 20;
 }
