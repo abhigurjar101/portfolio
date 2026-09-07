@@ -6,25 +6,27 @@ import Navigation from "@/components/navigation/Navigation";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Abhishek Gurjar — Senior Gen AI Engineer",
+  title: "Abhishek Gurjar — AI/ML Engineer · Data Analyst · Python & Growth Architect",
   description:
-    "Senior Gen AI Engineer specializing in RAG, Advanced RAG, LLMs, Knowledge Graphs, AI Agents, Backend Engineering, and AWS Cloud.",
+    "AI/ML Engineer, Data Analyst, and Full Stack Python Developer with an Executive Diploma from IIIT-Bangalore and Master's from LJMU (UK). Experienced in AI systems, SQL data warehouses, backend design, marketing analytics, and client solutions.",
   keywords: [
-    "Gen AI Engineer",
-    "RAG",
-    "Advanced RAG",
-    "LLM",
+    "AI/ML Engineer",
+    "Data Analyst",
+    "Python Developer",
+    "Marketing Analytics",
+    "SEO Strategist",
+    "Client Solutions Architect",
+    "System Design",
     "Machine Learning",
-    "Knowledge Graph",
-    "AI Agents",
-    "Python",
-    "AWS",
-    "Backend Engineer",
+    "SQL Warehousing",
+    "GraphRAG",
+    "Local LLMs",
+    "AWS Cloud",
   ],
   authors: [{ name: "Abhishek Gurjar", url: "https://github.com/abhigurjar101" }],
   openGraph: {
-    title: "Abhishek Gurjar — Senior Gen AI Engineer",
-    description: "Building production-grade Generative AI systems and intelligent RAG pipelines.",
+    title: "Abhishek Gurjar — AI/ML Engineer · Data Analyst · Python & Growth Architect",
+    description: "Bridging intelligent AI algorithms with real-world business growth, data analytics, and clean backend architecture.",
     type: "website",
   },
 };
