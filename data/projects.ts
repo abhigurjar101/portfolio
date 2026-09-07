@@ -1,5 +1,7 @@
 export type ProjectCategory =
   | "ALL"
+  | "AGENTIC AI"
+  | "ADVANCED"
   | "GEN AI"
   | "RAG"
   | "ADVANCED RAG"
@@ -26,6 +28,8 @@ export interface Project {
   featured: boolean;
   highlights: string[];
   language: string;
+  badges?: string[];
+  themeColor?: "indigo" | "purple" | "cyan" | "emerald" | "amber" | "rose";
 }
 
 export const projects: Project[] = [
@@ -36,16 +40,39 @@ export const projects: Project[] = [
       "Built a fully local GraphRAG application using Ollama for on-device LLM inference, Neo4j knowledge graph modeling, and relationship-aware retrieval that decisively outperforms vector-only RAG.",
     longDescription:
       "Nemi is a cutting-edge local GraphRAG system utilizing Ollama for on-device LLM inference, requiring no external API calls and keeping sensitive data 100% on-machine. Modeled document entities and relationships as a knowledge graph in Neo4j, enabling relationship-aware retrieval that decisively outperforms standard vector-only RAG on complex multi-hop queries. Designed the complete ingestion pipeline to extract entities/relations and combined graph traversal with local LLM generation for verifiable, context-grounded answers.",
-    categories: ["GEN AI", "ADVANCED RAG", "KNOWLEDGE GRAPH", "RAG", "LLM"],
+    categories: ["AGENTIC AI", "ADVANCED", "GEN AI", "ADVANCED RAG", "KNOWLEDGE GRAPH", "RAG", "LLM"],
     tech: ["Neo4j", "Ollama", "Python", "GraphRAG", "Cypher", "Vector Embeddings", "Electron", "React"],
     github: "https://github.com/abhigurjar101/nemi",
     featured: true,
     language: "Python / TypeScript",
+    badges: ["PRODUCTION", "AGENTIC AI", "ADVANCED"],
+    themeColor: "purple",
     highlights: [
       "Built a fully local GraphRAG application using Ollama for on-device LLM inference, zero external API cost & zero data leakage",
       "Modeled document entities and relationships as a knowledge graph in Neo4j for relationship-aware retrieval",
       "Superior accuracy on multi-hop queries compared to standard vector-only RAG",
       "Combined graph traversal with local LLM generation for context-grounded answers",
+    ],
+  },
+  {
+    id: "n8n-desktop-bots",
+    title: "n8n Desktop Bots — 9 Autonomous AI Agents (NVIDIA Nemotron)",
+    description:
+      "Production multi-agent desktop automation system orchestrating 9 specialized AI agents powered by NVIDIA Nemotron 3 Ultra 550B, Qdrant vector database, and 10,000+ n8n workflow integrations.",
+    longDescription:
+      "Architected an enterprise-level multi-agent desktop automation control center built on 10,000+ n8n community workflow patterns. Orchestrates 9 autonomous AI agents (Coding Assistant, Document RAG, System Design, High Thinking, Automated Testing, Advanced Hybrid RAG, Cloud Deployment, AI/ML Pipeline, and n8n Cluster Manager). Powered by NVIDIA Nemotron 3 Ultra 550B with Qdrant vector embeddings, Docker orchestration, and a real-time FastAPI telemetry control center.",
+    categories: ["AGENTIC AI", "ADVANCED", "GEN AI", "AI AGENTS"],
+    tech: ["NVIDIA Nemotron", "n8n Workflows", "Qdrant", "FastAPI", "Docker", "Python", "Autonomous Agents"],
+    github: "https://github.com/abhigurjar101/n8n-desktop-bots-automation",
+    featured: true,
+    language: "Python / TypeScript",
+    badges: ["PRODUCTION", "AGENTIC AI", "ADVANCED"],
+    themeColor: "indigo",
+    highlights: [
+      "Orchestrates 9 autonomous production AI bots across Coding, System Design, Testing, Cloud K8s, and ML Pipelines",
+      "Powered by NVIDIA Nemotron 3 Ultra 550B reasoning model with Qdrant hybrid vector embeddings",
+      "Built on 10,000+ curated n8n automation workflows with webhook triggers and real-time execution DAGs",
+      "Includes full web control center dashboard (FastAPI) and CLI runner for sub-second agent delegation",
     ],
   },
   {
@@ -60,6 +87,8 @@ export const projects: Project[] = [
     github: "https://github.com/abhigurjar101/sql-production-analytics-engine",
     featured: true,
     language: "SQL / Python",
+    badges: ["PRODUCTION", "DATA WAREHOUSE"],
+    themeColor: "cyan",
     highlights: [
       "Designed full Star-Schema warehouse with indexed foreign keys for sub-second analytical execution",
       "Engineered RFM customer segmentation CTEs classifying customers into High-LTV, Loyal, and At-Risk tiers",
@@ -79,6 +108,8 @@ export const projects: Project[] = [
     github: "https://github.com/abhigurjar101/aws-serverless-ai-pipeline",
     featured: true,
     language: "Python / YAML",
+    badges: ["PRODUCTION", "SERVERLESS AI"],
+    themeColor: "amber",
     highlights: [
       "Event-driven architecture triggered automatically by S3 ObjectCreated events for zero idle cost ($0/mo when idle)",
       "Automated semantic document chunking and vector embedding generation via Amazon Bedrock Titan",
@@ -98,6 +129,8 @@ export const projects: Project[] = [
     github: "https://github.com/abhigurjar101/intelligent-document-rag-system",
     featured: true,
     language: "Python",
+    badges: ["ENTERPRISE RAG", "PRODUCTION"],
+    themeColor: "purple",
     highlights: [
       "Built a Retrieval-Augmented Generation (RAG) system for enterprise document search with semantic, context-aware responses",
       "Designed scalable document ingestion and high-dimensional embedding pipelines",
@@ -117,6 +150,8 @@ export const projects: Project[] = [
     github: "https://github.com/abhigurjar101/advanced-nlp-semantic-engine",
     featured: true,
     language: "Python",
+    badges: ["ADVANCED", "GRAPHRAG"],
+    themeColor: "indigo",
     highlights: [
       "Dynamic semantic chunking with sentence boundary cosine distance detection to eliminate arbitrary token cuts",
       "Automated Knowledge Graph SPO relation extraction constructing entity-relation triples for GraphRAG",
@@ -136,6 +171,8 @@ export const projects: Project[] = [
     github: "https://github.com/abhigurjar101/enterprise-healthcare-management-system",
     featured: true,
     language: "Python / SQL",
+    badges: ["PRODUCTION", "CLINICAL OPS"],
+    themeColor: "emerald",
     highlights: [
       "Modular 20-service hospital operating architecture covering clinical, administrative, and pharmacy workflows",
       "ACID-compliant SQLite relational database with 18 normalized tables, audit logs, and foreign key constraints",
@@ -155,6 +192,8 @@ export const projects: Project[] = [
     github: "https://github.com/abhigurjar101/industrial-surface-defect-detection",
     featured: true,
     language: "Python",
+    badges: ["EDGE AI", "COMPUTER VISION"],
+    themeColor: "rose",
     highlights: [
       "Transfer learning pipeline adapting MobileNetV2 for real-time industrial manufacturing quality assurance",
       "Classifies 6 critical steel surface defect categories: crazing, inclusion, patches, pits, scale, scratches",
@@ -174,6 +213,8 @@ export const projects: Project[] = [
     github: "https://github.com/abhigurjar101/AI-DATA-ASSISTANT",
     featured: true,
     language: "Python",
+    badges: ["AUTOML", "ANALYTICS"],
+    themeColor: "cyan",
     highlights: [
       "Natural language to high-performance DuckDB SQL conversion",
       "Supports 5 LLM engines including 100% offline local Ollama execution",
@@ -193,6 +234,8 @@ export const projects: Project[] = [
     github: "https://github.com/abhigurjar101/youtube-automation-os",
     featured: true,
     language: "Python",
+    badges: ["NLP", "GROWTH AI"],
+    themeColor: "rose",
     highlights: [
       "Built an AI-powered analytics platform to predict CTR, engagement, and audience growth",
       "Automated keyword generation, title optimization, and metadata recommendations using NLP",
@@ -212,6 +255,8 @@ export const projects: Project[] = [
     github: "https://github.com/abhigurjar101/E-COMMERCE-PROJECT-",
     featured: false,
     language: "Python / Jupyter",
+    badges: ["LTV PREDICTION", "RFM"],
+    themeColor: "emerald",
     highlights: [
       "End-to-end data transformation pipeline covering sales, product returns, orders, and shipping logistics",
       "Implemented RFM customer segmentation and churn risk modeling to optimize retention marketing",
@@ -230,6 +275,8 @@ export const projects: Project[] = [
     github: "https://github.com/abhigurjar101/Fraud-Detection",
     featured: false,
     language: "Python",
+    badges: ["FINTECH", "XGBOOST"],
+    themeColor: "rose",
     highlights: [
       "XGBoost gradient boosting classifier tuned for high recall and low false discovery rate",
       "Handled extreme class imbalance in financial transaction streams using SMOTE and threshold tuning",
@@ -243,11 +290,13 @@ export const projects: Project[] = [
       "Autonomous Socratic AI tutoring and classroom telemetry system built with LangChain, Local Ollama (Llama 3), and Streamlit.",
     longDescription:
       "Engineered an intelligent dual-portal education platform featuring a Socratic AI Tutor (Student Portal) and a real-time comprehension telemetry dashboard (Teacher Dashboard). Built with LangChain and on-device Ollama (Llama 3) to eliminate cloud API costs and protect student privacy while guiding learners step-by-step through complex concepts.",
-    categories: ["AI AGENTS", "GEN AI", "LLM"],
+    categories: ["AI AGENTS", "GEN AI", "LLM", "AGENTIC AI"],
     tech: ["LangChain", "Ollama", "Llama 3", "Streamlit", "Python", "Conversational Memory", "Telemetry"],
     github: "https://github.com/abhigurjar101/ai-classroom-teaching-agent",
     featured: true,
     language: "Python",
+    badges: ["AGENTIC AI", "EDTECH"],
+    themeColor: "purple",
     highlights: [
       "Socratic conversational AI tutor guiding students step-by-step rather than outputting raw answers",
       "Real-time Teacher Analytics dashboard tracking comprehension milestones and confusion hotspots",
@@ -267,6 +316,8 @@ export const projects: Project[] = [
     github: "https://github.com/abhigurjar101/nlp-sentiment-classification-fastapi",
     featured: false,
     language: "Python",
+    badges: ["FASTAPI", "DOCKER"],
+    themeColor: "indigo",
     highlights: [
       "Containerized FastAPI REST API delivering sub-50ms text summarization and sentiment analysis",
       "Singleton pipeline architecture preventing memory leaks and cold-start latency spikes",
@@ -286,6 +337,8 @@ export const projects: Project[] = [
     github: "https://github.com/abhigurjar101/nyc-taxi-fare-prediction",
     featured: false,
     language: "Python",
+    badges: ["BIG DATA", "1.89M ROWS"],
+    themeColor: "amber",
     highlights: [
       "Processed 1.89 Million taxi trip records across 12 monthly Parquet partitions",
       "Modeled peak commute hours, congestion surcharges, and airport flat-rate pricing dynamics",
@@ -304,6 +357,8 @@ export const projects: Project[] = [
     github: "https://github.com/abhigurjar101/hybrid-ai-recommendation-engine",
     featured: false,
     language: "Python",
+    badges: ["ML ENSEMBLE", "COLD START"],
+    themeColor: "purple",
     highlights: [
       "Hybrid ensemble architecture blending Collaborative Filtering with Content-Based tag similarity",
       "Solves the Cold-Start problem by automatically falling back to content matching for new users",
@@ -322,6 +377,8 @@ export const projects: Project[] = [
     github: "https://github.com/abhigurjar101/snowflake",
     featured: false,
     language: "SQL / Python",
+    badges: ["CLOUD WAREHOUSE", "ETL"],
+    themeColor: "cyan",
     highlights: [
       "Architected enterprise Snowflake warehouse schema for multi-source data ingestion",
       "Automated ETL pipeline tasks and data quality validation checks",
@@ -340,6 +397,8 @@ export const projects: Project[] = [
     github: "https://github.com/abhigurjar101/Youtube-Ultimate-UIX",
     featured: false,
     language: "Python",
+    badges: ["TELEMETRY", "CREATOR AI"],
+    themeColor: "rose",
     highlights: [
       "Advanced content creator intelligence dashboard tracking retention and engagement trends",
       "NLP-driven competitor benchmarking and title/thumbnail optimization",

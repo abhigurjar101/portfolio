@@ -207,3 +207,88 @@ body {
   pointer-events: none;
   z-index: 20;
 }
+
+/* Dynamic Subtle Color-Shifting Project Cards */
+@keyframes borderGradientSweep {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes ambientBreathe {
+  0%, 100% {
+    opacity: 0.12;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.24;
+    transform: scale(1.06);
+  }
+}
+
+.project-card-border-animated {
+  position: relative;
+  padding: 1px;
+  border-radius: 16px;
+  background-size: 250% 250%;
+  animation: borderGradientSweep 12s ease-in-out infinite;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card-border-animated:hover {
+  transform: translateY(-4px);
+}
+
+/* Dynamic Themes */
+.card-theme-purple {
+  background-image: linear-gradient(135deg, rgba(168, 85, 247, 0.45), rgba(99, 102, 241, 0.2), rgba(217, 70, 239, 0.4), rgba(168, 85, 247, 0.45));
+}
+.card-theme-purple:hover {
+  box-shadow: 0 12px 35px -5px rgba(168, 85, 247, 0.25);
+}
+
+.card-theme-indigo {
+  background-image: linear-gradient(135deg, rgba(99, 102, 241, 0.45), rgba(59, 130, 246, 0.2), rgba(168, 85, 247, 0.4), rgba(99, 102, 241, 0.45));
+}
+.card-theme-indigo:hover {
+  box-shadow: 0 12px 35px -5px rgba(99, 102, 241, 0.25);
+}
+
+.card-theme-cyan {
+  background-image: linear-gradient(135deg, rgba(6, 182, 212, 0.45), rgba(14, 165, 233, 0.2), rgba(16, 185, 129, 0.4), rgba(6, 182, 212, 0.45));
+}
+.card-theme-cyan:hover {
+  box-shadow: 0 12px 35px -5px rgba(6, 182, 212, 0.25);
+}
+
+.card-theme-emerald {
+  background-image: linear-gradient(135deg, rgba(16, 185, 129, 0.45), rgba(13, 148, 136, 0.2), rgba(6, 182, 212, 0.4), rgba(16, 185, 129, 0.45));
+}
+.card-theme-emerald:hover {
+  box-shadow: 0 12px 35px -5px rgba(16, 185, 129, 0.25);
+}
+
+.card-theme-amber {
+  background-image: linear-gradient(135deg, rgba(245, 158, 11, 0.45), rgba(234, 88, 12, 0.2), rgba(250, 204, 21, 0.4), rgba(245, 158, 11, 0.45));
+}
+.card-theme-amber:hover {
+  box-shadow: 0 12px 35px -5px rgba(245, 158, 11, 0.25);
+}
+
+.card-theme-rose {
+  background-image: linear-gradient(135deg, rgba(244, 63, 94, 0.45), rgba(236, 72, 153, 0.2), rgba(168, 85, 247, 0.4), rgba(244, 63, 94, 0.45));
+}
+.card-theme-rose:hover {
+  box-shadow: 0 12px 35px -5px rgba(244, 63, 94, 0.25);
+}
+
+.ambient-glow {
+  animation: ambientBreathe 7s ease-in-out infinite;
+}
+
